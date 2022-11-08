@@ -29,10 +29,10 @@ app.configure(function(){
 app.configure('development', function() {
   console.log('Using development settings.', process.env.RDS_HOSTNAME);
   app.set('connection', mysql.createConnection({
-    host: process.env.RDS_HOSTNAME,
-    user: process.env.RDS_USERNAME,
-    port: process.env.RDS_PORT,
-    password: process.env.RDS_PASSWORD}));
+    host: '',
+    user: '',
+    port: '',
+    password: ''}));
   app.use(express.errorHandler());
 });
 
